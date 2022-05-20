@@ -83,3 +83,21 @@ const   AR_PARAM_LT_DEFAULT_OFFSET: u8  = 15;
     let dist_factor[AR_DIST_FACTOR_NUM_MAX]: ARdouble; ///< See function arParamObserv2Ideal() for discussion.
     let dist_function_version: i32; ///< See function arParamObserv2Ideal() for discussion. Must be last field in structure (as will not be written to disk).
 };
+
+// original code from ARToolKit5 AR/param.h 
+/*typedef struct {
+	int dist_factor_num;
+	int ARParam_size;
+} arParamVersionInfo_t;*/
+
+struct arParamVersionInfo_t {
+    let dist_factor_num: i8;
+    let ARParam_size: i8;
+}
+
+// original code from ARToolKit5 AR/param.h
+// How we can convert in Rust?
+/*!
+    @brief   Constant array with parameters applicable to each version of the camera parameter distortion function.
+ */
+//extern const arParamVersionInfo_t arParamVersionInfo[AR_DIST_FUNCTION_VERSION_MAX];
