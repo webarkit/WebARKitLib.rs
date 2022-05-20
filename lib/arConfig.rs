@@ -78,14 +78,14 @@ if AR_ENABLE_MINIMIZE_MEMORY_FOOTPRINT {
     const   AR_PATT_NUM_MAX: usize =                   50; 
 }
 
-const   AR_PATT_SIZE1: usize =                     16;		// Default number of rows and columns in pattern when pattern detection mode is not AR_MATRIX_CODE_DETECTION. Must be 16 in order to be compatible with ARToolKit versions 1.0 to 5.1.6.
+const   AR_PATT_SIZE1: usize =                     16;		// Default number of rows and columns in pattern when pattern detection mode is not AR_MATRIX_CODE_DETECTION. Must be 16 in order to be compatible with WebARKit versions 1.0 to 5.1.6.
 const   AR_PATT_SIZE1_MAX: usize =                 64;     // Maximum number of rows and columns allowed in pattern when pattern detection mode is not AR_MATRIX_CODE_DETECTION.
 const   AR_PATT_SIZE2_MAX: usize =                 32;     // Maximum number of rows and columns allowed in pattern when pattern detection mode is AR_MATRIX_CODE_DETECTION.
 const   AR_PATT_SAMPLE_FACTOR1: u8 =            4;     // Maximum number of samples per pattern pixel row / column when pattern detection mode is not AR_MATRIX_CODE_DETECTION.
 const   AR_PATT_SAMPLE_FACTOR2: u8 =             3;     // Maximum number of samples per pattern pixel row / column when detection mode is AR_MATRIX_CODE_DETECTION.
 const   AR_PATT_CONTRAST_THRESH1: f32 =         15.0;	// Required contrast over pattern space when pattern detection mode is AR_TEMPLATE_MATCHING_MONO or AR_TEMPLATE_MATCHING_COLOR.
 const   AR_PATT_CONTRAST_THRESH2: f32 =          30.0;	// Required contrast between black and white barcode segments when pattern detection mode is AR_MATRIX_CODE_DETECTION.
-const   AR_PATT_RATIO: f32 =                      0.5;   // Default value for percentage of marker width or height considered to be pattern space. Equal to 1.0 - 2*borderSize. Must be 0.5 in order to be compatible with ARToolKit versions 1.0 to 4.4.
+const   AR_PATT_RATIO: f32 =                      0.5;   // Default value for percentage of marker width or height considered to be pattern space. Equal to 1.0 - 2*borderSize. Must be 0.5 in order to be compatible with WebARKit versions 1.0 to 4.4.
 
 
 

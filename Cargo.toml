@@ -1,0 +1,7 @@
+[package]
+name = "WebARKitLib.rs"
+version = "0.1.0"
+authors = ["kalwalt <github@kalwaltart.it>"]
+edition = "2021"
+
+[dependnencies]
