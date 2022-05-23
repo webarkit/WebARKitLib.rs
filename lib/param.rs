@@ -77,11 +77,11 @@ const   AR_PARAM_LT_DEFAULT_OFFSET: u8  = 15;
  */
 
  struct ARParam {
-    let xsize: i32;                 ///< The width in pixels of images returned by arVideoGetImage() for the camera.
-    let ysize: i32;                 ///< The height in pixels of images returned by arVideoGetImage() for the camera.
-    let mat[3][4]: ARdouble;             ///< The projection matrix for the calibrated camera parameters. This can be converted to an OpenGL projection matrix by the function arglCameraFrustumRHf().
-    let dist_factor[AR_DIST_FACTOR_NUM_MAX]: ARdouble; ///< See function arParamObserv2Ideal() for discussion.
-    let dist_function_version: i32; ///< See function arParamObserv2Ideal() for discussion. Must be last field in structure (as will not be written to disk).
+    xsize: i32;                 ///< The width in pixels of images returned by arVideoGetImage() for the camera.
+    ysize: i32;                 ///< The height in pixels of images returned by arVideoGetImage() for the camera.
+    mat[3][4]: ARdouble;             ///< The projection matrix for the calibrated camera parameters. This can be converted to an OpenGL projection matrix by the function arglCameraFrustumRHf().
+    dist_factor[AR_DIST_FACTOR_NUM_MAX]: ARdouble; ///< See function arParamObserv2Ideal() for discussion.
+    dist_function_version: i32; ///< See function arParamObserv2Ideal() for discussion. Must be last field in structure (as will not be written to disk).
 };
 
 // original code from ARToolKit5 AR/param.h 
@@ -91,8 +91,8 @@ const   AR_PARAM_LT_DEFAULT_OFFSET: u8  = 15;
 } arParamVersionInfo_t;*/
 
 struct arParamVersionInfo_t {
-    let dist_factor_num: i8;
-    let ARParam_size: i8;
+    dist_factor_num: i8;
+    ARParam_size: i8;
 }
 
 // original code from ARToolKit5 AR/param.h

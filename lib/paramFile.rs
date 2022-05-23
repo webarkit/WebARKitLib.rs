@@ -39,11 +39,11 @@ mod param;
 use std::fs;
 
 struct ARParamd {
-    let xsize: i32;
-    let ysize: i32;
-    let mat[3][4]: f64:
-    let dist_factor[param::AR_DIST_FACTOR_NUM_MAX]: f64;
-    let dist_function_version: i32;
+    xsize: i32;
+    ysize: i32;
+    mat[3][4]: f64:
+    dist_factor[param::AR_DIST_FACTOR_NUM_MAX]: f64;
+    dist_function_version: i32;
 }
 
 //fn arParamLoad(filename: String, num: i32, param: ARParam)
@@ -52,6 +52,7 @@ fn arParamLoad(filename: String)
     let mut ret: i8 = 0;
     let dist_function_version: i32;
     let flen: i32;
+    let i: i8;
     //if (num < 1 || !filename || !param) {
     if num < 1 {
         ret =-1;
@@ -60,4 +61,17 @@ fn arParamLoad(filename: String)
     flen = info.len();
     println!("{}", flen);
     println!("{}", info);
+    for (i = 0; i < AR_DIST_FUNCTION_VERSION_MAX; i++) {
+		if (flen % arParamVersionInfo[i].ARParam_size == 0) {
+			dist_function_version = i + 1;
+			break;
+		}
+	}
+	if (i == AR_DIST_FUNCTION_VERSION_MAX) {
+		println!("Error: supplied buffer does not appear to be ARToolKit camera parameters.\n");
+		//fclose(fp);  // don't need to close file anymore
+		return -1;
+	}
+    
+	println!("Reading camera parameters from buffer (distortion function version {}).\n", dist_function_version);
 }
